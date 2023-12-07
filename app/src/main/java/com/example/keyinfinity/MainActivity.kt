@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun generatePassword() {
-        val password = generateRandomPassword(16)
-        passwordTextView.text = "Your Password: \n$password"
+        val password = generateRandomPassword(20)
+        passwordTextView.text = "Your Password:\n$password"
     }
 
     private fun generateRandomPassword(length: Int): String {
