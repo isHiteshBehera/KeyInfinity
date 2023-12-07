@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import java.lang.StringBuilder
 import java.util.Random
 
@@ -50,5 +51,7 @@ class MainActivity : AppCompatActivity() {
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clipData = ClipData.newPlainText("Password", password)
         clipboardManager.setPrimaryClip(clipData)
+
+        Toast.makeText(this, "Cpoied", Toast.LENGTH_SHORT).show()
     }
 }
