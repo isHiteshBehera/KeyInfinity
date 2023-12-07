@@ -1,5 +1,8 @@
 package com.example.keyinfinity
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,11 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         val generateButton: Button = findViewById(R.id.generateButton)
         generateButton.setOnClickListener { generatePassword() }
+
+        val copyButton: Button = findViewById(R.id.copyPassword)
+        copyButton.setOnClickListener { copyToClipboard() }
     }
 
     private fun generatePassword() {
         val password = generateRandomPassword(20)
-        passwordTextView.text = "Your Password:\n$password"
+        passwordTextView.text = password
     }
 
     private fun generateRandomPassword(length: Int): String {
@@ -36,5 +42,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         return password.toString()
+    }
+
+    private fun copyToClipboard() {
+        val password = passwordTextView.text.toString().trim()
+
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("Password", password)
+        clipboardManager.setPrimaryClip(clipData)
     }
 }
