@@ -1,4 +1,4 @@
-package com.example.keyinfinity
+package com.isHiteshBehera.keyinfinity
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                     stopRandomLetterAnimation()
                 } else {
                     currentIndex++
-                    handler.postDelayed(this, 50)
+                    handler.postDelayed(this, 100)
                 }
             }
         }

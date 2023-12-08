@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.keyinfinity"
+    namespace = "com.isHiteshBehera.keyinfinity"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.keyinfinity"
+        applicationId = "com.isHiteshBehera.keyinfinity"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

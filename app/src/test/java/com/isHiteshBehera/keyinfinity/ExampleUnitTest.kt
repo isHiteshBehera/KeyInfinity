@@ -1,4 +1,4 @@
-package com.example.keyinfinity
+package com.isHiteshBehera.keyinfinity
 
 import org.junit.Test
 
